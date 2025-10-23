@@ -1,9 +1,0 @@
-
-
-echo "▶ pre-push: lint + Cypress (CT+E2E)"
-npm run lint || exit 1
-
-
-# швидкі перевірки; за потреби зроби повний регрес
-# npm run test:ct || exit 1
-# npm run test:e2e || exit 1
