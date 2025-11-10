@@ -9,32 +9,45 @@ import {
   CheckoutScreen,
   ProfileScreen,
 } from './screens';
+import { NotFoundScreen } from './screens/NotFoundScreen';
+import { ProtectedRoute } from './screens/ProtectedRoute';
 
-const NotFound = () => (
-  <div style={{ padding: 16 }}>
-    <h2>404</h2>
-    <p>Page not found</p>
-    <a href="/menu">Go to Menu</a>
-  </div>
-);
 const router = createBrowserRouter([
-  { path: '/', element: <Navigate to="/menu" replace /> },
+  {
+    path: '/login',
+    element: <LoginScreen />,
+  },
+  {
+    path: '/register',
+    element: <RegisterScreen />,
+  },
 
-  // auth
-  { path: '/login', element: <LoginScreen /> },
-  { path: '/register', element: <RegisterScreen /> },
+  {
+    path: '/',
+    element: <ProtectedRoute />,
+    errorElement: <NotFoundScreen />,
 
-  // app
-  { path: '/menu', element: <MenuScreen /> },
-  { path: '/orders', element: <OrdersBucketsScreen /> },
-  { path: '/orders/active', element: <OrdersActiveScreen /> },
-  { path: '/order/:id', element: <OrderStatusScreen /> },
-  { path: '/checkout', element: <CheckoutScreen /> },
-  { path: '/profile', element: <ProfileScreen /> },
+    children: [
+      {
+        index: true,
+        element: <Navigate to="/menu" replace />,
+      },
 
-  // 404
-  { path: '*', element: <NotFound /> },
+      { path: 'menu', element: <MenuScreen /> },
+      { path: 'orders', element: <OrdersBucketsScreen /> },
+      { path: 'orders/active', element: <OrdersActiveScreen /> },
+      { path: 'orders/:id', element: <OrderStatusScreen /> },
+      { path: 'checkout', element: <CheckoutScreen /> },
+      { path: 'profile', element: <ProfileScreen /> },
+    ],
+  },
+
+  {
+    path: '*',
+    element: <NotFoundScreen />,
+  },
 ]);
+
 export default function App() {
   return <RouterProvider router={router} />;
 }

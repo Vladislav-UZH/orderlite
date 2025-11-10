@@ -19,7 +19,7 @@ export function Avatar({ src, alt = 'avatar', size = 88, children }: AvatarProps
   return (
     <AvatarWrap size={size}>
       <span aria-hidden style={{ fontSize: size * 0.45, lineHeight: 1 }}>
-        🧑🏻‍💻
+        🧑🏻
       </span>
       {children}
     </AvatarWrap>

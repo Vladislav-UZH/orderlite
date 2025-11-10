@@ -456,7 +456,6 @@ export const SheetTitle = styled.h3`
   flex: 1;
 `;
 
-/* ---------- Toast (простий тост) ---------- */
 export const ToastBar = styled.div<{ $show?: boolean }>`
   position: fixed;
   left: 50%;

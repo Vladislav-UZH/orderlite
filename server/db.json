@@ -1,0 +1,98 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@orderlite.test",
+      "name": "Admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "email": "user@test.com",
+      "name": "Test",
+      "password": "admin123",
+      "role": "customer"
+    }
+  ],
+  "menuItems": [
+    {
+      "id": 1,
+      "name": "Latte",
+      "description": "Espresso with steamed milk",
+      "price": 3.5,
+      "category": "coffee"
+    },
+    {
+      "id": 2,
+      "name": "Americano",
+      "description": "Espresso with hot water",
+      "price": 2.75,
+      "category": "coffee"
+    },
+    {
+      "id": 3,
+      "name": "Cappuccino",
+      "description": "Espresso with frothed milk",
+      "price": 3.25,
+      "category": "coffee"
+    },
+    {
+      "id": 4,
+      "name": "Croissant",
+      "description": "Buttery flaky pastry",
+      "price": 2.2,
+      "category": "pastry"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 1,
+      "items": [
+        {
+          "menuItemId": 1,
+          "quantity": 1
+        }
+      ],
+      "status": "delivered",
+      "createdAt": "2025-11-10T16:28:07.700Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "items": [
+        {
+          "menuItemId": 3,
+          "quantity": 1
+        }
+      ],
+      "status": "delivered",
+      "createdAt": "2025-11-10T16:28:42.739Z"
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "items": [
+        {
+          "menuItemId": 1,
+          "quantity": 1
+        }
+      ],
+      "status": "ready",
+      "createdAt": "2025-11-10T17:09:55.484Z"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "items": [
+        {
+          "menuItemId": 1,
+          "quantity": 1
+        }
+      ],
+      "status": "ready",
+      "createdAt": "2025-11-10T17:13:56.811Z"
+    }
+  ]
+}
