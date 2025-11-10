@@ -316,3 +316,4 @@ app.patch('/orders/:id', authMiddleware, async (req: AuthRequest, res: Response)
 app.listen(PORT, () => {
   console.log(`OrderLite API running on http://localhost:${PORT}`);
 });
+// foo
