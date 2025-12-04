@@ -1,19 +1,23 @@
 import express from 'express';
 import type { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import { promises as fs } from 'fs';
-import path from 'path';
 import crypto from 'crypto';
+import dotenv from 'dotenv';
+import bcrypt from 'bcrypt';
+import {
+  connectMongo,
+  UserModel,
+  MenuItemModel,
+  OrderModel,
+  nextSeq,
+  type Role,
+  type UserRecord,
+  type OrderStatus,
+} from './db/models';
 
-type Role = 'customer' | 'admin';
+dotenv.config();
 
-type UserRecord = {
-  id: number;
-  email: string;
-  name: string;
-  password: string;
-  role: Role;
-};
+const BCRYPT_ROUNDS = 10;
 
 type PublicUser = {
   id: number;
@@ -27,35 +31,6 @@ type AuthResponse = {
   user: PublicUser;
 };
 
-type MenuItem = {
-  id: number;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-};
-
-type OrderStatus = 'new' | 'inProgress' | 'ready' | 'delivered';
-
-type OrderItem = {
-  menuItemId: number;
-  quantity: number;
-};
-
-type Order = {
-  id: number;
-  userId: number;
-  items: OrderItem[];
-  status: OrderStatus;
-  createdAt: string;
-};
-
-type DbData = {
-  users: UserRecord[];
-  menuItems: MenuItem[];
-  orders: Order[];
-};
-
 type RegisterPayload = {
   name: string;
   email: string;
@@ -66,6 +41,8 @@ type LoginPayload = {
   email: string;
   password: string;
 };
+
+type OrderItem = { menuItemId: number; quantity: number };
 
 type CreateOrderPayload = {
   userId: number;
@@ -79,29 +56,16 @@ interface AuthRequest extends Request {
 }
 
 const app = express();
-const PORT = 3000;
-const DB_PATH = path.join(__dirname, '..', 'db.json');
+const PORT = Number(process.env.PORT || 3000);
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/orderlite';
+
 const sessions = new Map<string, number>();
 
 app.use(cors());
 app.use(express.json());
 
-async function readDb(): Promise<DbData> {
-  const data = await fs.readFile(DB_PATH, 'utf-8');
-  return JSON.parse(data) as DbData;
-}
-
-async function writeDb(db: DbData): Promise<void> {
-  await fs.writeFile(DB_PATH, JSON.stringify(db, null, 2), 'utf-8');
-}
-
 function toPublicUser(user: UserRecord): PublicUser {
-  return {
-    id: user.id,
-    email: user.email,
-    name: user.name,
-    role: user.role,
-  };
+  return { id: user.id, email: user.email, name: user.name, role: user.role };
 }
 
 function createToken(): string {
@@ -120,12 +84,13 @@ async function authMiddleware(req: AuthRequest, res: Response, next: NextFunctio
     res.status(401).json({ message: 'Unauthorized' });
     return;
   }
-  const db = await readDb();
-  const user = db.users.find((u) => u.id === userId);
+
+  const user = await UserModel.findOne({ id: userId }).lean();
   if (!user) {
     res.status(401).json({ message: 'Unauthorized' });
     return;
   }
+
   req.userId = user.id;
   req.userRole = user.role;
   next();
@@ -138,35 +103,34 @@ app.post('/register', async (req: Request, res: Response) => {
     return;
   }
 
-  const db = await readDb();
-  const existing = db.users.find((u) => u.email.toLowerCase() === payload.email.toLowerCase());
+  const email = payload.email.toLowerCase();
+  const existing = await UserModel.findOne({ email }).lean();
   if (existing) {
     res.status(400).json({ message: 'User already exists' });
     return;
   }
 
-  const nextId = db.users.length ? Math.max(...db.users.map((u) => u.id)) + 1 : 1;
-  const role: Role = db.users.length === 0 ? 'admin' : 'customer';
+  const isFirstUser = (await UserModel.countDocuments()) === 0;
+  const role: Role = isFirstUser ? 'admin' : 'customer';
+
+  const id = await nextSeq('users');
+
+  const passwordHash = await bcrypt.hash(payload.password, BCRYPT_ROUNDS);
 
   const newUser: UserRecord = {
-    id: nextId,
-    email: payload.email,
+    id,
+    email,
     name: payload.name,
-    password: payload.password,
+    password: passwordHash,
     role,
   };
 
-  db.users.push(newUser);
-  await writeDb(db);
+  await UserModel.create(newUser);
 
   const accessToken = createToken();
   sessions.set(accessToken, newUser.id);
 
-  const response: AuthResponse = {
-    accessToken,
-    user: toPublicUser(newUser),
-  };
-
+  const response: AuthResponse = { accessToken, user: toPublicUser(newUser) };
   res.status(201).json(response);
 });
 
@@ -177,9 +141,15 @@ app.post('/login', async (req: Request, res: Response) => {
     return;
   }
 
-  const db = await readDb();
-  const user = db.users.find((u) => u.email.toLowerCase() === payload.email.toLowerCase());
-  if (!user || user.password !== payload.password) {
+  const email = payload.email.toLowerCase();
+  const user = await UserModel.findOne({ email }).lean();
+  if (!user) {
+    res.status(400).json({ message: 'Invalid credentials' });
+    return;
+  }
+
+  const ok = await bcrypt.compare(payload.password, user.password);
+  if (!ok) {
     res.status(400).json({ message: 'Invalid credentials' });
     return;
   }
@@ -187,37 +157,32 @@ app.post('/login', async (req: Request, res: Response) => {
   const accessToken = createToken();
   sessions.set(accessToken, user.id);
 
-  const response: AuthResponse = {
-    accessToken,
-    user: toPublicUser(user),
-  };
-
+  const response: AuthResponse = { accessToken, user: toPublicUser(user) };
   res.json(response);
 });
 
 app.get('/menuItems', async (_req: Request, res: Response) => {
-  const db = await readDb();
-  res.json(db.menuItems);
+  const items = await MenuItemModel.find().sort({ id: 1 }).lean();
+  res.json(items);
 });
 
 app.get('/orders', authMiddleware, async (req: AuthRequest, res: Response) => {
-  const db = await readDb();
   if (!req.userId || !req.userRole) {
     res.status(401).json({ message: 'Unauthorized' });
     return;
   }
 
   if (req.userRole === 'admin') {
-    res.json(db.orders);
+    const orders = await OrderModel.find().sort({ id: -1 }).lean();
+    res.json(orders);
     return;
   }
 
-  const userOrders = db.orders.filter((o) => o.userId === req.userId);
+  const userOrders = await OrderModel.find({ userId: req.userId }).sort({ id: -1 }).lean();
   res.json(userOrders);
 });
 
 app.get('/orders/:id', authMiddleware, async (req: AuthRequest, res: Response) => {
-  const db = await readDb();
   if (!req.userId || !req.userRole) {
     res.status(401).json({ message: 'Unauthorized' });
     return;
@@ -229,7 +194,7 @@ app.get('/orders/:id', authMiddleware, async (req: AuthRequest, res: Response) =
     return;
   }
 
-  const order = db.orders.find((o) => o.id === orderId);
+  const order = await OrderModel.findOne({ id: orderId }).lean();
   if (!order) {
     res.status(404).json({ message: 'Order not found' });
     return;
@@ -260,19 +225,17 @@ app.post('/orders', authMiddleware, async (req: AuthRequest, res: Response) => {
     return;
   }
 
-  const db = await readDb();
-  const nextId = db.orders.length ? Math.max(...db.orders.map((o) => o.id)) + 1 : 1;
+  const id = await nextSeq('orders');
 
-  const newOrder: Order = {
-    id: nextId,
+  const newOrder = {
+    id,
     userId: payload.userId,
     items: payload.items,
     status: payload.status ?? 'new',
     createdAt: new Date().toISOString(),
   };
 
-  db.orders.push(newOrder);
-  await writeDb(db);
+  await OrderModel.create(newOrder);
 
   res.status(201).json(newOrder);
 });
@@ -282,7 +245,6 @@ app.patch('/orders/:id', authMiddleware, async (req: AuthRequest, res: Response)
     res.status(401).json({ message: 'Unauthorized' });
     return;
   }
-
   if (req.userRole !== 'admin') {
     res.status(403).json({ message: 'Forbidden' });
     return;
@@ -300,21 +262,30 @@ app.patch('/orders/:id', authMiddleware, async (req: AuthRequest, res: Response)
     return;
   }
 
-  const db = await readDb();
-  const index = db.orders.findIndex((o) => o.id === orderId);
-  if (index === -1) {
+  const updated = await OrderModel.findOneAndUpdate(
+    { id: orderId },
+    { $set: { status: body.status } },
+    { new: true },
+  ).lean();
+
+  if (!updated) {
     res.status(404).json({ message: 'Order not found' });
     return;
   }
 
-  db.orders[index] = { ...db.orders[index], status: body.status };
-  await writeDb(db);
-
-  res.json(db.orders[index]);
+  res.json(updated);
 });
 
-app.listen(PORT, () => {
-  console.log(`OrderLite API running on http://localhost:${PORT}`);
+async function bootstrap() {
+  await connectMongo(MONGODB_URI);
+  console.log('Mongo connected');
+
+  app.listen(PORT, () => {
+    console.log(`OrderLite API running on http://localhost:${PORT}`);
+  });
+}
+
+bootstrap().catch((e) => {
+  console.error(e);
+  process.exit(1);
 });
-// foo
-// boo
