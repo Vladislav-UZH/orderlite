@@ -4,6 +4,8 @@ import cors from 'cors';
 import crypto from 'crypto';
 import dotenv from 'dotenv';
 import bcrypt from 'bcrypt';
+import path from 'path';
+
 import {
   connectMongo,
   UserModel,
@@ -275,6 +277,16 @@ app.patch('/orders/:id', authMiddleware, async (req: AuthRequest, res: Response)
 
   res.json(updated);
 });
+
+
+const clientDist = path.resolve(process.cwd(), 'dist');
+
+app.use(express.static(clientDist));
+
+app.get('*', (_req, res) => {
+  res.sendFile(path.join(clientDist, 'index.html'));
+});
+
 
 async function bootstrap() {
   await connectMongo(MONGODB_URI);
