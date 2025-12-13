@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1762802629591" clover="3.2.0">
+  <project timestamp="1762802629591" name="All files">
+    <metrics statements="1016" coveredstatements="983" conditionals="492" coveredconditionals="348" methods="377" coveredmethods="361" elements="1885" coveredelements="1692" complexity="0" loc="1016" ncloc="1016" packages="8" files="34" classes="34"/>
+    <package name="cypress.component">
+      <metrics statements="476" coveredstatements="474" conditionals="7" coveredconditionals="6" methods="148" coveredmethods="146"/>
+      <file name="App.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/App.cy.tsx">
+        <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="16" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+      </file>
+      <file name="Avatar.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/Avatar.cy.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="3" count="18" type="stmt"/>
+        <line num="4" count="18" type="stmt"/>
+        <line num="5" count="18" type="stmt"/>
+        <line num="6" count="18" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
+        <line num="10" count="12" type="stmt"/>
+        <line num="17" count="12" type="stmt"/>
+      </file>
+      <file name="BottomTabs.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/BottomTabs.cy.tsx">
+        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="30" type="stmt"/>
+        <line num="6" count="30" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="22" count="10" type="stmt"/>
+        <line num="23" count="10" type="stmt"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="26" count="10" type="stmt"/>
+        <line num="27" count="10" type="stmt"/>
+      </file>
+      <file name="CheckoutScreen.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/CheckoutScreen.cy.tsx">
+        <metrics statements="69" coveredstatements="69" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="16"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="5" count="16" type="stmt"/>
+        <line num="7" count="16" type="stmt"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="20" type="stmt"/>
+        <line num="12" count="40" type="stmt"/>
+        <line num="13" count="16" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="24" type="stmt"/>
+        <line num="22" count="26" type="stmt"/>
+        <line num="23" count="26" type="stmt"/>
+        <line num="24" count="24" type="stmt"/>
+        <line num="26" count="20" type="stmt"/>
+        <line num="33" count="24" type="stmt"/>
+        <line num="34" count="24" type="stmt"/>
+        <line num="35" count="20" type="stmt"/>
+        <line num="37" count="20" type="stmt"/>
+        <line num="39" count="24" type="stmt"/>
+        <line num="53" count="20" type="stmt"/>
+        <line num="55" count="40" type="stmt"/>
+        <line num="57" count="24" type="stmt"/>
+        <line num="58" count="24" type="stmt"/>
+        <line num="60" count="24" type="stmt"/>
+        <line num="61" count="16" type="stmt"/>
+        <line num="63" count="16" type="stmt"/>
+        <line num="66" count="24" type="stmt"/>
+        <line num="67" count="14" type="stmt"/>
+        <line num="69" count="22" type="stmt"/>
+        <line num="72" count="16" type="stmt"/>
+        <line num="74" count="22" type="stmt"/>
+        <line num="81" count="16" type="stmt"/>
+        <line num="90" count="14" type="stmt"/>
+        <line num="92" count="14" type="stmt"/>
+        <line num="93" count="14" type="stmt"/>
+        <line num="94" count="14" type="stmt"/>
+        <line num="96" count="14" type="stmt"/>
+        <line num="98" count="14" type="stmt"/>
+        <line num="101" count="8" type="stmt"/>
+        <line num="102" count="12" type="stmt"/>
+        <line num="104" count="12" type="stmt"/>
+        <line num="109" count="20" type="stmt"/>
+        <line num="110" count="18" type="stmt"/>
+        <line num="112" count="10" type="stmt"/>
+        <line num="113" count="10" type="stmt"/>
+        <line num="114" count="10" type="stmt"/>
+        <line num="115" count="10" type="stmt"/>
+        <line num="116" count="10" type="stmt"/>
+        <line num="117" count="10" type="stmt"/>
+        <line num="118" count="12" type="stmt"/>
+        <line num="120" count="34" type="stmt"/>
+        <line num="122" count="18" type="stmt"/>
+        <line num="138" count="4" type="stmt"/>
+        <line num="140" count="4" type="stmt"/>
+        <line num="141" count="4" type="stmt"/>
+        <line num="142" count="4" type="stmt"/>
+        <line num="144" count="4" type="stmt"/>
+        <line num="146" count="4" type="stmt"/>
+        <line num="147" count="4" type="stmt"/>
+        <line num="148" count="4" type="stmt"/>
+        <line num="149" count="4" type="stmt"/>
+        <line num="151" count="4" type="stmt"/>
+        <line num="153" count="4" type="stmt"/>
+        <line num="156" count="2" type="stmt"/>
+        <line num="157" count="2" type="stmt"/>
+        <line num="158" count="2" type="stmt"/>
+        <line num="159" count="2" type="stmt"/>
+        <line num="162" count="4" type="stmt"/>
+        <line num="163" count="4" type="stmt"/>
+      </file>
+      <file name="LoginScreen.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/LoginScreen.cy.tsx">
+        <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="24" type="stmt"/>
+        <line num="7" count="24" type="stmt"/>
+        <line num="8" count="16" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="24" type="stmt"/>
+        <line num="17" count="24" type="stmt"/>
+        <line num="19" count="44" type="stmt"/>
+        <line num="20" count="24" type="stmt"/>
+        <line num="22" count="24" type="stmt"/>
+        <line num="23" count="24" type="stmt"/>
+        <line num="25" count="24" type="stmt"/>
+        <line num="26" count="22" type="stmt"/>
+        <line num="28" count="22" type="stmt"/>
+        <line num="30" count="22" type="stmt"/>
+        <line num="33" count="24" type="stmt"/>
+        <line num="34" count="20" type="stmt"/>
+        <line num="47" count="44" type="stmt"/>
+        <line num="49" count="20" type="stmt"/>
+        <line num="50" count="20" type="stmt"/>
+        <line num="52" count="20" type="stmt"/>
+        <line num="53" count="20" type="stmt"/>
+        <line num="55" count="20" type="stmt"/>
+        <line num="58" count="14" type="stmt"/>
+        <line num="59" count="14" type="stmt"/>
+        <line num="62" count="16" type="stmt"/>
+      </file>
+      <file name="MenuScreen.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/MenuScreen.cy.tsx">
+        <metrics statements="44" coveredstatements="44" conditionals="3" coveredconditionals="2" methods="15" coveredmethods="15"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="6" count="20" type="stmt"/>
+        <line num="7" count="20" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="36" type="stmt"/>
+        <line num="12" count="36" type="stmt"/>
+        <line num="14" count="36" type="stmt"/>
+        <line num="28" count="60" type="stmt"/>
+        <line num="34" count="116" type="stmt"/>
+        <line num="37" count="36" type="stmt"/>
+        <line num="38" count="92" type="stmt"/>
+        <line num="40" count="36" type="stmt"/>
+        <line num="41" count="92" type="stmt"/>
+        <line num="42" count="92" type="stmt"/>
+        <line num="45" count="92" type="stmt"/>
+        <line num="46" count="90" type="stmt"/>
+        <line num="48" count="90" type="stmt"/>
+        <line num="49" count="90" type="stmt"/>
+        <line num="50" count="90" type="stmt"/>
+        <line num="53" count="92" type="stmt"/>
+        <line num="54" count="88" type="stmt"/>
+        <line num="56" count="88" type="stmt"/>
+        <line num="57" count="88" type="stmt"/>
+        <line num="58" count="88" type="stmt"/>
+        <line num="61" count="92" type="stmt"/>
+        <line num="62" count="86" type="stmt"/>
+        <line num="64" count="86" type="stmt"/>
+        <line num="65" count="86" type="stmt"/>
+        <line num="68" count="36" type="stmt"/>
+        <line num="69" count="28" type="stmt"/>
+        <line num="78" count="36" type="stmt"/>
+        <line num="80" count="28" type="stmt"/>
+        <line num="82" count="36" type="stmt"/>
+        <line num="83" count="36" type="stmt"/>
+        <line num="84" count="90" type="stmt"/>
+        <line num="85" count="26" type="stmt"/>
+        <line num="87" count="26" type="stmt"/>
+        <line num="88" count="22" type="stmt"/>
+        <line num="89" count="22" type="stmt"/>
+        <line num="91" count="66" type="stmt"/>
+        <line num="94" count="24" type="stmt"/>
+        <line num="96" count="36" type="stmt"/>
+        <line num="98" count="28" type="stmt"/>
+        <line num="99" count="12" type="stmt"/>
+        <line num="101" count="32" type="stmt"/>
+      </file>
+      <file name="NotFoundScreen.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/NotFoundScreen.cy.tsx">
+        <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="5" count="50" type="stmt"/>
+        <line num="6" count="50" type="stmt"/>
+        <line num="17" count="24" type="stmt"/>
+        <line num="18" count="24" type="stmt"/>
+        <line num="19" count="24" type="stmt"/>
+        <line num="25" count="24" type="stmt"/>
+        <line num="26" count="24" type="stmt"/>
+        <line num="27" count="24" type="stmt"/>
+        <line num="28" count="24" type="stmt"/>
+        <line num="31" count="24" type="stmt"/>
+        <line num="32" count="18" type="stmt"/>
+        <line num="38" count="18" type="stmt"/>
+        <line num="39" count="18" type="stmt"/>
+        <line num="42" count="24" type="stmt"/>
+        <line num="43" count="12" type="stmt"/>
+        <line num="49" count="12" type="stmt"/>
+        <line num="50" count="12" type="stmt"/>
+      </file>
+      <file name="OrderStatusScreen.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/OrderStatusScreen.cy.tsx">
+        <metrics statements="40" coveredstatements="40" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
+        <line num="5" count="24" type="stmt"/>
+        <line num="6" count="24" type="stmt"/>
+        <line num="8" count="24" type="stmt"/>
+        <line num="9" count="24" type="stmt"/>
+        <line num="10" count="54" type="stmt"/>
+        <line num="11" count="54" type="stmt"/>
+        <line num="21" count="24" type="stmt"/>
+        <line num="22" count="54" type="stmt"/>
+        <line num="31" count="24" type="stmt"/>
+        <line num="32" count="24" type="stmt"/>
+        <line num="34" count="24" type="stmt"/>
+        <line num="45" count="24" type="stmt"/>
+        <line num="47" count="24" type="stmt"/>
+        <line num="49" count="24" type="stmt"/>
+        <line num="50" count="24" type="stmt"/>
+        <line num="51" count="24" type="stmt"/>
+        <line num="52" count="24" type="stmt"/>
+        <line num="55" count="24" type="stmt"/>
+        <line num="56" count="18" type="stmt"/>
+        <line num="58" count="18" type="stmt"/>
+        <line num="63" count="18" type="stmt"/>
+        <line num="65" count="18" type="stmt"/>
+        <line num="67" count="18" type="stmt"/>
+        <line num="68" count="18" type="stmt"/>
+        <line num="71" count="24" type="stmt"/>
+        <line num="72" count="12" type="stmt"/>
+        <line num="74" count="12" type="stmt"/>
+        <line num="85" count="12" type="stmt"/>
+        <line num="86" count="10" type="stmt"/>
+        <line num="98" count="12" type="stmt"/>
+        <line num="100" count="12" type="stmt"/>
+        <line num="102" count="12" type="stmt"/>
+        <line num="103" count="12" type="stmt"/>
+        <line num="104" count="12" type="stmt"/>
+        <line num="106" count="12" type="stmt"/>
+        <line num="107" count="12" type="stmt"/>
+        <line num="109" count="12" type="stmt"/>
+        <line num="112" count="10" type="stmt"/>
+        <line num="115" count="12" type="stmt"/>
+        <line num="116" count="12" type="stmt"/>
+      </file>
+      <file name="OrdersActiveScreen.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/OrdersActiveScreen.cy.tsx">
+        <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="4" count="18" type="stmt"/>
+        <line num="5" count="18" type="stmt"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="20" count="18" type="stmt"/>
+        <line num="21" count="18" type="stmt"/>
+        <line num="22" count="12" type="stmt"/>
+        <line num="23" count="12" type="stmt"/>
+        <line num="33" count="18" type="stmt"/>
+        <line num="34" count="18" type="stmt"/>
+        <line num="35" count="18" type="stmt"/>
+        <line num="37" count="18" type="stmt"/>
+        <line num="43" count="18" type="stmt"/>
+        <line num="45" count="18" type="stmt"/>
+        <line num="48" count="18" type="stmt"/>
+        <line num="49" count="12" type="stmt"/>
+        <line num="51" count="12" type="stmt"/>
+        <line num="59" count="12" type="stmt"/>
+        <line num="79" count="12" type="stmt"/>
+        <line num="85" count="12" type="stmt"/>
+        <line num="87" count="12" type="stmt"/>
+        <line num="88" count="12" type="stmt"/>
+        <line num="90" count="12" type="stmt"/>
+        <line num="91" count="12" type="stmt"/>
+        <line num="93" count="12" type="stmt"/>
+        <line num="94" count="12" type="stmt"/>
+      </file>
+      <file name="OrdersBucketsScreen.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/OrdersBucketsScreen.cy.tsx">
+        <metrics statements="62" coveredstatements="60" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="17"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="5" count="52" type="stmt"/>
+        <line num="7" count="52" type="stmt"/>
+        <line num="8" count="57" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="16" type="stmt"/>
+        <line num="11" count="47" type="stmt"/>
+        <line num="19" count="16" type="stmt"/>
+        <line num="21" count="44" type="stmt"/>
+        <line num="22" count="24" type="stmt"/>
+        <line num="23" count="26" type="stmt"/>
+        <line num="24" count="26" type="stmt"/>
+        <line num="27" count="26" type="stmt"/>
+        <line num="28" count="24" type="stmt"/>
+        <line num="34" count="24" type="stmt"/>
+        <line num="35" count="24" type="stmt"/>
+        <line num="37" count="24" type="stmt"/>
+        <line num="38" count="20" type="stmt"/>
+        <line num="39" count="20" type="stmt"/>
+        <line num="43" count="20" type="stmt"/>
+        <line num="44" count="20" type="stmt"/>
+        <line num="47" count="8" type="stmt"/>
+        <line num="48" count="18" type="stmt"/>
+        <line num="50" count="22" type="stmt"/>
+        <line num="70" count="18" type="stmt"/>
+        <line num="74" count="18" type="stmt"/>
+        <line num="75" count="18" type="stmt"/>
+        <line num="76" count="18" type="stmt"/>
+        <line num="77" count="18" type="stmt"/>
+        <line num="78" count="18" type="stmt"/>
+        <line num="79" count="18" type="stmt"/>
+        <line num="80" count="18" type="stmt"/>
+        <line num="82" count="20" type="stmt"/>
+        <line num="84" count="22" type="stmt"/>
+        <line num="85" count="16" type="stmt"/>
+        <line num="86" count="24" type="stmt"/>
+        <line num="90" count="14" type="stmt"/>
+        <line num="92" count="22" type="stmt"/>
+        <line num="95" count="19" type="stmt"/>
+        <line num="96" count="25" type="stmt"/>
+        <line num="97" count="16" type="stmt"/>
+        <line num="99" count="22" type="stmt"/>
+        <line num="102" count="18" type="stmt"/>
+        <line num="103" count="20" type="stmt"/>
+        <line num="106" count="22" type="stmt"/>
+        <line num="109" count="16" type="stmt"/>
+        <line num="110" count="16" type="stmt"/>
+        <line num="111" count="32" type="stmt"/>
+        <line num="113" count="18" type="stmt"/>
+        <line num="116" count="4" type="stmt"/>
+        <line num="117" count="0" type="stmt"/>
+        <line num="120" count="6" type="stmt"/>
+        <line num="124" count="0" type="stmt"/>
+        <line num="127" count="6" type="stmt"/>
+        <line num="130" count="8" type="stmt"/>
+        <line num="131" count="4" type="stmt"/>
+        <line num="133" count="4" type="stmt"/>
+        <line num="139" count="4" type="stmt"/>
+        <line num="145" count="4" type="stmt"/>
+        <line num="146" count="4" type="stmt"/>
+        <line num="147" count="4" type="stmt"/>
+        <line num="148" count="4" type="stmt"/>
+      </file>
+      <file name="ProfileScreen.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/ProfileScreen.cy.tsx">
+        <metrics statements="41" coveredstatements="41" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
+        <line num="4" count="30" type="stmt"/>
+        <line num="5" count="30" type="stmt"/>
+        <line num="8" count="95" type="stmt"/>
+        <line num="9" count="95" type="stmt"/>
+        <line num="21" count="30" type="stmt"/>
+        <line num="22" count="30" type="stmt"/>
+        <line num="23" count="54" type="stmt"/>
+        <line num="24" count="54" type="stmt"/>
+        <line num="34" count="30" type="stmt"/>
+        <line num="35" count="30" type="stmt"/>
+        <line num="37" count="30" type="stmt"/>
+        <line num="42" count="30" type="stmt"/>
+        <line num="48" count="30" type="stmt"/>
+        <line num="50" count="30" type="stmt"/>
+        <line num="51" count="30" type="stmt"/>
+        <line num="52" count="30" type="stmt"/>
+        <line num="55" count="30" type="stmt"/>
+        <line num="56" count="24" type="stmt"/>
+        <line num="58" count="24" type="stmt"/>
+        <line num="78" count="24" type="stmt"/>
+        <line num="84" count="24" type="stmt"/>
+        <line num="86" count="24" type="stmt"/>
+        <line num="87" count="24" type="stmt"/>
+        <line num="89" count="24" type="stmt"/>
+        <line num="90" count="24" type="stmt"/>
+        <line num="93" count="30" type="stmt"/>
+        <line num="94" count="18" type="stmt"/>
+        <line num="96" count="18" type="stmt"/>
+        <line num="109" count="18" type="stmt"/>
+        <line num="115" count="18" type="stmt"/>
+        <line num="117" count="18" type="stmt"/>
+        <line num="118" count="18" type="stmt"/>
+        <line num="121" count="30" type="stmt"/>
+        <line num="122" count="12" type="stmt"/>
+        <line num="124" count="12" type="stmt"/>
+        <line num="129" count="12" type="stmt"/>
+        <line num="135" count="12" type="stmt"/>
+        <line num="137" count="12" type="stmt"/>
+        <line num="138" count="12" type="stmt"/>
+        <line num="140" count="12" type="stmt"/>
+        <line num="141" count="10" type="stmt"/>
+      </file>
+      <file name="ProtectedRoute.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/ProtectedRoute.cy.tsx">
+        <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+        <line num="4" count="24" type="stmt"/>
+        <line num="7" count="65" type="stmt"/>
+        <line num="8" count="65" type="stmt"/>
+        <line num="22" count="24" type="stmt"/>
+        <line num="23" count="24" type="stmt"/>
+        <line num="24" count="30" type="stmt"/>
+        <line num="25" count="30" type="stmt"/>
+        <line num="35" count="24" type="stmt"/>
+        <line num="36" count="24" type="stmt"/>
+        <line num="38" count="24" type="stmt"/>
+        <line num="44" count="24" type="stmt"/>
+        <line num="45" count="24" type="stmt"/>
+        <line num="48" count="24" type="stmt"/>
+        <line num="49" count="18" type="stmt"/>
+        <line num="51" count="18" type="stmt"/>
+        <line num="57" count="18" type="stmt"/>
+        <line num="58" count="18" type="stmt"/>
+        <line num="61" count="24" type="stmt"/>
+        <line num="62" count="12" type="stmt"/>
+        <line num="64" count="12" type="stmt"/>
+        <line num="70" count="12" type="stmt"/>
+        <line num="71" count="12" type="stmt"/>
+      </file>
+      <file name="RegisterScreen.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/RegisterScreen.cy.tsx">
+        <metrics statements="34" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="5" count="24" type="stmt"/>
+        <line num="6" count="24" type="stmt"/>
+        <line num="7" count="54" type="stmt"/>
+        <line num="14" count="24" type="stmt"/>
+        <line num="15" count="24" type="stmt"/>
+        <line num="17" count="24" type="stmt"/>
+        <line num="19" count="24" type="stmt"/>
+        <line num="20" count="24" type="stmt"/>
+        <line num="21" count="24" type="stmt"/>
+        <line num="22" count="24" type="stmt"/>
+        <line num="24" count="24" type="stmt"/>
+        <line num="27" count="24" type="stmt"/>
+        <line num="28" count="18" type="stmt"/>
+        <line num="30" count="18" type="stmt"/>
+        <line num="31" count="18" type="stmt"/>
+        <line num="32" count="18" type="stmt"/>
+        <line num="33" count="18" type="stmt"/>
+        <line num="35" count="18" type="stmt"/>
+        <line num="37" count="18" type="stmt"/>
+        <line num="38" count="18" type="stmt"/>
+        <line num="41" count="24" type="stmt"/>
+        <line num="42" count="12" type="stmt"/>
+        <line num="55" count="12" type="stmt"/>
+        <line num="57" count="12" type="stmt"/>
+        <line num="58" count="12" type="stmt"/>
+        <line num="59" count="12" type="stmt"/>
+        <line num="60" count="12" type="stmt"/>
+        <line num="62" count="12" type="stmt"/>
+        <line num="63" count="12" type="stmt"/>
+        <line num="65" count="12" type="stmt"/>
+        <line num="68" count="10" type="stmt"/>
+        <line num="69" count="10" type="stmt"/>
+        <line num="70" count="10" type="stmt"/>
+        <line num="73" count="12" type="stmt"/>
+      </file>
+      <file name="ui-kit.cy.tsx" path="G:/PROJECTS/orderlite/cypress/component/ui-kit.cy.tsx">
+        <metrics statements="66" coveredstatements="66" conditionals="2" coveredconditionals="2" methods="33" coveredmethods="33"/>
+        <line num="17" count="26" type="stmt"/>
+        <line num="18" count="78" type="stmt"/>
+        <line num="19" count="78" type="stmt"/>
+        <line num="20" count="78" type="stmt"/>
+        <line num="21" count="78" type="stmt"/>
+        <line num="22" count="78" type="stmt"/>
+        <line num="23" count="78" type="stmt"/>
+        <line num="25" count="78" type="stmt"/>
+        <line num="26" count="78" type="stmt"/>
+        <line num="27" count="74" type="stmt"/>
+        <line num="32" count="72" type="stmt"/>
+        <line num="35" count="78" type="stmt"/>
+        <line num="36" count="74" type="stmt"/>
+        <line num="37" count="66" type="stmt"/>
+        <line num="41" count="26" type="stmt"/>
+        <line num="42" count="70" type="stmt"/>
+        <line num="43" count="78" type="stmt"/>
+        <line num="44" count="60" type="stmt"/>
+        <line num="45" count="60" type="stmt"/>
+        <line num="48" count="78" type="stmt"/>
+        <line num="49" count="70" type="stmt"/>
+        <line num="50" count="54" type="stmt"/>
+        <line num="51" count="54" type="stmt"/>
+        <line num="55" count="62" type="stmt"/>
+        <line num="56" count="62" type="stmt"/>
+        <line num="57" count="16" type="stmt"/>
+        <line num="59" count="176" type="cond" truecount="2" falsecount="0"/>
+        <line num="60" count="78" type="stmt"/>
+        <line num="62" count="58" type="stmt"/>
+        <line num="63" count="68" type="stmt"/>
+        <line num="64" count="106" type="stmt"/>
+        <line num="68" count="78" type="stmt"/>
+        <line num="69" count="78" type="stmt"/>
+        <line num="70" count="42" type="stmt"/>
+        <line num="71" count="42" type="stmt"/>
+        <line num="77" count="78" type="stmt"/>
+        <line num="78" count="36" type="stmt"/>
+        <line num="79" count="64" type="stmt"/>
+        <line num="80" count="24" type="stmt"/>
+        <line num="83" count="26" type="stmt"/>
+        <line num="84" count="26" type="stmt"/>
+        <line num="85" count="62" type="stmt"/>
+        <line num="86" count="34" type="stmt"/>
+        <line num="88" count="78" type="stmt"/>
+        <line num="97" count="30" type="stmt"/>
+        <line num="98" count="30" type="stmt"/>
+        <line num="99" count="30" type="stmt"/>
+        <line num="100" count="30" type="stmt"/>
+        <line num="103" count="78" type="stmt"/>
+        <line num="104" count="224" type="stmt"/>
+        <line num="105" count="60" type="stmt"/>
+        <line num="106" count="52" type="stmt"/>
+        <line num="107" count="38" type="stmt"/>
+        <line num="109" count="43" type="stmt"/>
+        <line num="110" count="26" type="stmt"/>
+        <line num="111" count="41" type="stmt"/>
+        <line num="112" count="45" type="stmt"/>
+        <line num="114" count="58" type="stmt"/>
+        <line num="115" count="18" type="stmt"/>
+        <line num="119" count="48" type="stmt"/>
+        <line num="120" count="48" type="stmt"/>
+        <line num="121" count="42" type="stmt"/>
+        <line num="123" count="42" type="stmt"/>
+        <line num="128" count="12" type="stmt"/>
+        <line num="129" count="12" type="stmt"/>
+        <line num="130" count="12" type="stmt"/>
+      </file>
+    </package>
+    <package name="cypress.support">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="component.ts" path="G:/PROJECTS/orderlite/cypress/support/component.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="13" count="366" type="stmt"/>
+      </file>
+    </package>
+    <package name="src">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.tsx" path="G:/PROJECTS/orderlite/src/App.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="15" count="24" type="stmt"/>
+        <line num="52" count="10" type="stmt"/>
+      </file>
+      <file name="main.tsx" path="G:/PROJECTS/orderlite/src/main.tsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="6" count="18" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.common">
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="api.ts" path="G:/PROJECTS/orderlite/src/common/api.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="3" count="252" type="stmt"/>
+        <line num="5" count="252" type="stmt"/>
+        <line num="12" count="252" type="stmt"/>
+        <line num="15" count="283" type="stmt"/>
+        <line num="17" count="283" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="273" type="stmt"/>
+        <line num="20" count="190" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="16" coveredstatements="16" conditionals="7" coveredconditionals="6" methods="10" coveredmethods="10"/>
+      <file name="Avatar.tsx" path="G:/PROJECTS/orderlite/src/components/Avatar.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="12" count="245" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="19" count="235" type="stmt"/>
+      </file>
+      <file name="BottomTabs.tsx" path="G:/PROJECTS/orderlite/src/components/BottomTabs.tsx">
+        <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="9"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="5" count="1617" type="stmt"/>
+        <line num="6" count="1617" type="stmt"/>
+        <line num="12" count="1907" type="stmt"/>
+        <line num="13" count="4851" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1617" type="stmt"/>
+        <line num="16" count="1907" type="stmt"/>
+        <line num="17" count="4394" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="1617" type="stmt"/>
+        <line num="24" count="300" type="stmt"/>
+        <line num="26" count="1617" type="stmt"/>
+        <line num="31" count="300" type="stmt"/>
+        <line num="33" count="1617" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.ui">
+      <metrics statements="68" coveredstatements="66" conditionals="45" coveredconditionals="35" methods="24" coveredmethods="22"/>
+      <file name="ui-kit.ts" path="G:/PROJECTS/orderlite/src/components/ui/ui-kit.ts">
+        <metrics statements="68" coveredstatements="66" conditionals="45" coveredconditionals="35" methods="24" coveredmethods="22"/>
+        <line num="6" count="358" type="stmt"/>
+        <line num="13" count="358" type="stmt"/>
+        <line num="18" count="358" type="stmt"/>
+        <line num="26" count="358" type="stmt"/>
+        <line num="33" count="358" type="stmt"/>
+        <line num="39" count="358" type="stmt"/>
+        <line num="45" count="358" type="stmt"/>
+        <line num="51" count="358" type="stmt"/>
+        <line num="69" count="358" type="stmt"/>
+        <line num="84" count="358" type="stmt"/>
+        <line num="92" count="358" type="stmt"/>
+        <line num="98" count="358" type="stmt"/>
+        <line num="104" count="358" type="stmt"/>
+        <line num="132" count="358" type="stmt"/>
+        <line num="135" count="6020" type="cond" truecount="2" falsecount="0"/>
+        <line num="140" count="6020" type="cond" truecount="2" falsecount="0"/>
+        <line num="142" count="6020" type="cond" truecount="2" falsecount="0"/>
+        <line num="143" count="6020" type="cond" truecount="2" falsecount="0"/>
+        <line num="146" count="6020" type="cond" truecount="2" falsecount="0"/>
+        <line num="148" count="6020" type="cond" truecount="2" falsecount="0"/>
+        <line num="161" count="358" type="stmt"/>
+        <line num="171" count="358" type="stmt"/>
+        <line num="184" count="358" type="stmt"/>
+        <line num="191" count="358" type="stmt"/>
+        <line num="211" count="358" type="stmt"/>
+        <line num="218" count="358" type="stmt"/>
+        <line num="222" count="358" type="stmt"/>
+        <line num="231" count="358" type="stmt"/>
+        <line num="237" count="358" type="stmt"/>
+        <line num="243" count="1284" type="cond" truecount="2" falsecount="0"/>
+        <line num="245" count="1284" type="cond" truecount="2" falsecount="0"/>
+        <line num="246" count="1284" type="cond" truecount="2" falsecount="0"/>
+        <line num="255" count="358" type="cond" truecount="0" falsecount="1"/>
+        <line num="272" count="353" type="cond" truecount="0" falsecount="1"/>
+        <line num="281" count="358" type="stmt"/>
+        <line num="298" count="358" type="stmt"/>
+        <line num="306" count="358" type="stmt"/>
+        <line num="310" count="358" type="stmt"/>
+        <line num="314" count="358" type="stmt"/>
+        <line num="319" count="358" type="stmt"/>
+        <line num="323" count="52" type="cond" truecount="0" falsecount="1"/>
+        <line num="329" count="358" type="stmt"/>
+        <line num="335" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="345" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="361" count="358" type="stmt"/>
+        <line num="376" count="358" type="stmt"/>
+        <line num="383" count="5721" type="cond" truecount="2" falsecount="0"/>
+        <line num="387" count="358" type="stmt"/>
+        <line num="396" count="358" type="stmt"/>
+        <line num="398" count="1173" type="cond" truecount="0" falsecount="1"/>
+        <line num="399" count="1173" type="cond" truecount="1" falsecount="0"/>
+        <line num="402" count="358" type="stmt"/>
+        <line num="406" count="358" type="stmt"/>
+        <line num="412" count="358" type="stmt"/>
+        <line num="417" count="602" type="cond" truecount="2" falsecount="0"/>
+        <line num="418" count="602" type="cond" truecount="2" falsecount="0"/>
+        <line num="423" count="358" type="stmt"/>
+        <line num="432" count="602" type="cond" truecount="2" falsecount="0"/>
+        <line num="438" count="358" type="stmt"/>
+        <line num="446" count="358" type="stmt"/>
+        <line num="452" count="358" type="stmt"/>
+        <line num="459" count="358" type="stmt"/>
+        <line num="463" count="632" type="cond" truecount="2" falsecount="0"/>
+        <line num="464" count="632" type="cond" truecount="2" falsecount="0"/>
+        <line num="479" count="358" type="stmt"/>
+        <line num="494" count="358" type="stmt"/>
+        <line num="495" count="245" type="cond" truecount="0" falsecount="1"/>
+        <line num="496" count="245" type="cond" truecount="0" falsecount="1"/>
+      </file>
+    </package>
+    <package name="src.hooks">
+      <metrics statements="101" coveredstatements="88" conditionals="35" coveredconditionals="12" methods="26" coveredmethods="23"/>
+      <file name="useAuth.ts" path="G:/PROJECTS/orderlite/src/hooks/useAuth.ts">
+        <metrics statements="56" coveredstatements="46" conditionals="18" coveredconditionals="6" methods="11" coveredmethods="10"/>
+        <line num="21" count="216" type="stmt"/>
+        <line num="24" count="26" type="stmt"/>
+        <line num="28" count="451" type="stmt"/>
+        <line num="29" count="451" type="cond" truecount="1" falsecount="0"/>
+        <line num="30" count="247" type="stmt"/>
+        <line num="31" count="247" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="38" count="10" type="stmt"/>
+        <line num="42" count="4636" type="stmt"/>
+        <line num="43" count="451" type="stmt"/>
+        <line num="44" count="451" type="cond" truecount="1" falsecount="0"/>
+        <line num="45" count="247" type="stmt"/>
+        <line num="47" count="451" type="stmt"/>
+        <line num="49" count="4636" type="stmt"/>
+        <line num="50" count="4636" type="stmt"/>
+        <line num="52" count="4636" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="4636" type="cond" truecount="2" falsecount="0"/>
+        <line num="54" count="4636" type="stmt"/>
+        <line num="56" count="4636" type="stmt"/>
+        <line num="57" count="16" type="stmt"/>
+        <line num="58" count="16" type="stmt"/>
+        <line num="59" count="16" type="stmt"/>
+        <line num="60" count="16" type="stmt"/>
+        <line num="61" count="16" type="stmt"/>
+        <line num="62" count="16" type="stmt"/>
+        <line num="63" count="16" type="stmt"/>
+        <line num="64" count="16" type="stmt"/>
+        <line num="66" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="67" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="70" count="16" type="stmt"/>
+        <line num="74" count="4636" type="stmt"/>
+        <line num="75" count="10" type="stmt"/>
+        <line num="76" count="10" type="stmt"/>
+        <line num="77" count="10" type="stmt"/>
+        <line num="78" count="10" type="stmt"/>
+        <line num="79" count="10" type="stmt"/>
+        <line num="80" count="10" type="stmt"/>
+        <line num="81" count="10" type="stmt"/>
+        <line num="82" count="10" type="stmt"/>
+        <line num="84" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="85" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="88" count="10" type="stmt"/>
+        <line num="92" count="4636" type="stmt"/>
+        <line num="93" count="10" type="stmt"/>
+        <line num="94" count="10" type="stmt"/>
+        <line num="95" count="10" type="stmt"/>
+        <line num="98" count="4636" type="stmt"/>
+        <line num="99" count="451" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="102" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="104" count="451" type="stmt"/>
+        <line num="105" count="451" type="stmt"/>
+        <line num="108" count="4636" type="stmt"/>
+      </file>
+      <file name="useMenuItems.ts" path="G:/PROJECTS/orderlite/src/hooks/useMenuItems.ts">
+        <metrics statements="18" coveredstatements="15" conditionals="8" coveredconditionals="2" methods="6" coveredmethods="5"/>
+        <line num="13" count="649" type="stmt"/>
+        <line num="14" count="649" type="stmt"/>
+        <line num="15" count="649" type="stmt"/>
+        <line num="17" count="649" type="stmt"/>
+        <line num="18" count="137" type="stmt"/>
+        <line num="19" count="137" type="stmt"/>
+        <line num="20" count="137" type="stmt"/>
+        <line num="22" count="137" type="stmt"/>
+        <line num="25" count="135" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="130" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="135" type="cond" truecount="1" falsecount="0"/>
+        <line num="35" count="130" type="stmt"/>
+        <line num="38" count="137" type="stmt"/>
+        <line num="39" count="107" type="stmt"/>
+        <line num="43" count="649" type="stmt"/>
+      </file>
+      <file name="useOrders.ts" path="G:/PROJECTS/orderlite/src/hooks/useOrders.ts">
+        <metrics statements="27" coveredstatements="27" conditionals="9" coveredconditionals="4" methods="9" coveredmethods="8"/>
+        <line num="26" count="1319" type="stmt"/>
+        <line num="27" count="1319" type="stmt"/>
+        <line num="28" count="1319" type="stmt"/>
+        <line num="30" count="1319" type="stmt"/>
+        <line num="31" count="262" type="stmt"/>
+        <line num="32" count="262" type="stmt"/>
+        <line num="33" count="262" type="stmt"/>
+        <line num="34" count="262" type="stmt"/>
+        <line num="35" count="158" type="stmt"/>
+        <line num="37" count="89" type="cond" truecount="1" falsecount="2"/>
+        <line num="38" count="89" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="247" type="stmt"/>
+        <line num="44" count="1319" type="stmt"/>
+        <line num="45" count="262" type="stmt"/>
+        <line num="48" count="1319" type="stmt"/>
+        <line num="49" count="13" type="stmt"/>
+        <line num="56" count="13" type="stmt"/>
+        <line num="57" count="16" type="stmt"/>
+        <line num="58" count="13" type="stmt"/>
+        <line num="61" count="1319" type="stmt"/>
+        <line num="62" count="55" type="stmt"/>
+        <line num="63" count="36" type="stmt"/>
+        <line num="66" count="1319" type="stmt"/>
+        <line num="67" count="10" type="stmt"/>
+        <line num="68" count="10" type="cond" truecount="0" falsecount="2"/>
+        <line num="69" count="10" type="stmt"/>
+        <line num="72" count="1319" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.screens">
+      <metrics statements="344" coveredstatements="328" conditionals="396" coveredconditionals="287" methods="167" coveredmethods="158"/>
+      <file name="CheckoutScreen.tsx" path="G:/PROJECTS/orderlite/src/screens/CheckoutScreen.tsx">
+        <metrics statements="67" coveredstatements="67" conditionals="68" coveredconditionals="62" methods="27" coveredmethods="27"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="36" count="428" type="stmt"/>
+        <line num="37" count="428" type="stmt"/>
+        <line num="38" count="604" type="stmt"/>
+        <line num="39" count="428" type="stmt"/>
+        <line num="40" count="428" type="stmt"/>
+        <line num="41" count="604" type="stmt"/>
+        <line num="42" count="428" type="stmt"/>
+        <line num="44" count="428" type="stmt"/>
+        <line num="45" count="428" type="stmt"/>
+        <line num="46" count="780" type="stmt"/>
+        <line num="47" count="428" type="stmt"/>
+        <line num="49" count="1032" type="stmt"/>
+        <line num="50" count="428" type="cond" truecount="2" falsecount="0"/>
+        <line num="52" count="428" type="stmt"/>
+        <line num="53" count="428" type="cond" truecount="1" falsecount="1"/>
+        <line num="54" count="428" type="stmt"/>
+        <line num="55" count="604" type="stmt"/>
+        <line num="57" count="604" type="cond" truecount="6" falsecount="0"/>
+        <line num="59" count="604" type="stmt"/>
+        <line num="60" count="651" type="cond" truecount="7" falsecount="0"/>
+        <line num="61" count="186" type="stmt"/>
+        <line num="62" count="186" type="cond" truecount="1" falsecount="0"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="65" count="428" type="stmt"/>
+        <line num="66" count="55" type="stmt"/>
+        <line num="67" count="176" type="cond" truecount="1" falsecount="0"/>
+        <line num="68" count="196" type="stmt"/>
+        <line num="69" count="434" type="cond" truecount="0" falsecount="1"/>
+        <line num="70" count="428" type="stmt"/>
+        <line num="71" count="211" type="cond" truecount="1" falsecount="0"/>
+        <line num="72" count="191" type="stmt"/>
+        <line num="73" count="434" type="cond" truecount="0" falsecount="1"/>
+        <line num="74" count="428" type="stmt"/>
+        <line num="75" count="196" type="cond" truecount="4" falsecount="0"/>
+        <line num="76" count="186" type="stmt"/>
+        <line num="77" count="434" type="cond" truecount="4" falsecount="0"/>
+        <line num="78" count="431" type="stmt"/>
+        <line num="80" count="16" type="stmt"/>
+        <line num="81" count="186" type="stmt"/>
+        <line num="82" count="3" type="stmt"/>
+        <line num="84" count="428" type="stmt"/>
+        <line num="85" count="10" type="cond" truecount="2" falsecount="1"/>
+        <line num="87" count="176" type="stmt"/>
+        <line num="88" count="444" type="cond" truecount="2" falsecount="1"/>
+        <line num="90" count="186" type="stmt"/>
+        <line num="91" count="186" type="stmt"/>
+        <line num="93" count="13" type="stmt"/>
+        <line num="97" count="13" type="stmt"/>
+        <line num="98" count="13" type="stmt"/>
+        <line num="99" count="13" type="stmt"/>
+        <line num="100" count="13" type="stmt"/>
+        <line num="101" count="3" type="stmt"/>
+        <line num="103" count="20" type="stmt"/>
+        <line num="105" count="3" type="stmt"/>
+        <line num="107" count="428" type="stmt"/>
+        <line num="110" count="428" type="stmt"/>
+        <line num="123" count="284" type="stmt"/>
+        <line num="125" count="467" type="stmt"/>
+        <line num="132" count="320" type="stmt"/>
+        <line num="134" count="455" type="stmt"/>
+        <line num="141" count="431" type="stmt"/>
+        <line num="144" count="428" type="stmt"/>
+        <line num="170" count="428" type="stmt"/>
+        <line num="175" count="428" type="stmt"/>
+        <line num="190" count="176" type="stmt"/>
+        <line num="192" count="428" type="stmt"/>
+      </file>
+      <file name="LoginScreen.tsx" path="G:/PROJECTS/orderlite/src/screens/LoginScreen.tsx">
+        <metrics statements="28" coveredstatements="28" conditionals="30" coveredconditionals="27" methods="7" coveredmethods="7"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="21" count="829" type="stmt"/>
+        <line num="22" count="829" type="stmt"/>
+        <line num="23" count="829" type="stmt"/>
+        <line num="25" count="829" type="stmt"/>
+        <line num="26" count="829" type="stmt"/>
+        <line num="27" count="829" type="stmt"/>
+        <line num="30" count="1201" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="829" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="1201" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1201" type="cond" truecount="4" falsecount="0"/>
+        <line num="36" count="829" type="stmt"/>
+        <line num="37" count="1201" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="372" type="cond" truecount="1" falsecount="0"/>
+        <line num="39" count="384" type="stmt"/>
+        <line num="40" count="835" type="cond" truecount="0" falsecount="1"/>
+        <line num="41" count="829" type="stmt"/>
+        <line num="43" count="16" type="stmt"/>
+        <line num="44" count="382" type="stmt"/>
+        <line num="45" count="382" type="stmt"/>
+        <line num="46" count="16" type="stmt"/>
+        <line num="47" count="16" type="stmt"/>
+        <line num="49" count="835" type="stmt"/>
+        <line num="52" count="829" type="stmt"/>
+        <line num="70" count="888" type="stmt"/>
+        <line num="71" count="925" type="stmt"/>
+        <line num="81" count="606" type="stmt"/>
+        <line num="82" count="895" type="stmt"/>
+      </file>
+      <file name="MenuScreen.tsx" path="G:/PROJECTS/orderlite/src/screens/MenuScreen.tsx">
+        <metrics statements="33" coveredstatements="33" conditionals="34" coveredconditionals="27" methods="24" coveredmethods="24"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="27" count="528" type="stmt"/>
+        <line num="28" count="528" type="stmt"/>
+        <line num="30" count="562" type="stmt"/>
+        <line num="31" count="528" type="stmt"/>
+        <line num="33" count="528" type="stmt"/>
+        <line num="34" count="562" type="stmt"/>
+        <line num="35" count="200" type="stmt"/>
+        <line num="36" count="312" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="550" type="stmt"/>
+        <line num="38" count="772" type="cond" truecount="1" falsecount="0"/>
+        <line num="41" count="528" type="stmt"/>
+        <line num="43" count="426" type="stmt"/>
+        <line num="44" count="34" type="stmt"/>
+        <line num="45" count="952" type="cond" truecount="3" falsecount="0"/>
+        <line num="49" count="940" type="cond" truecount="2" falsecount="0"/>
+        <line num="51" count="940" type="cond" truecount="3" falsecount="2"/>
+        <line num="52" count="550" type="cond" truecount="1" falsecount="1"/>
+        <line num="53" count="550" type="cond" truecount="2" falsecount="0"/>
+        <line num="56" count="528" type="stmt"/>
+        <line num="57" count="10" type="stmt"/>
+        <line num="58" count="34" type="stmt"/>
+        <line num="65" count="528" type="stmt"/>
+        <line num="68" count="34" type="stmt"/>
+        <line num="69" count="528" type="stmt"/>
+        <line num="72" count="34" type="stmt"/>
+        <line num="73" count="528" type="stmt"/>
+        <line num="84" count="528" type="stmt"/>
+        <line num="88" count="240" type="stmt"/>
+        <line num="95" count="54" type="stmt"/>
+        <line num="97" count="1214" type="stmt"/>
+        <line num="114" count="479" type="stmt"/>
+        <line num="115" count="550" type="stmt"/>
+      </file>
+      <file name="NotFoundScreen.tsx" path="G:/PROJECTS/orderlite/src/screens/NotFoundScreen.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="4" count="30" type="stmt"/>
+        <line num="5" count="55" type="stmt"/>
+        <line num="7" count="73" type="stmt"/>
+        <line num="9" count="55" type="stmt"/>
+        <line num="23" count="55" type="stmt"/>
+        <line num="27" count="55" type="stmt"/>
+      </file>
+      <file name="OrderStatusScreen.tsx" path="G:/PROJECTS/orderlite/src/screens/OrderStatusScreen.tsx">
+        <metrics statements="70" coveredstatements="68" conditionals="60" coveredconditionals="49" methods="21" coveredmethods="21"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="21" count="30" type="stmt"/>
+        <line num="22" count="18" type="stmt"/>
+        <line num="34" count="178" type="stmt"/>
+        <line num="35" count="178" type="stmt"/>
+        <line num="36" count="178" type="stmt"/>
+        <line num="37" count="266" type="stmt"/>
+        <line num="39" count="178" type="stmt"/>
+        <line num="40" count="178" type="stmt"/>
+        <line num="41" count="222" type="stmt"/>
+        <line num="42" count="178" type="stmt"/>
+        <line num="43" count="178" type="stmt"/>
+        <line num="45" count="178" type="stmt"/>
+        <line num="47" count="222" type="stmt"/>
+        <line num="48" count="89" type="stmt"/>
+        <line num="49" count="89" type="cond" truecount="0" falsecount="1"/>
+        <line num="50" count="188" type="stmt"/>
+        <line num="51" count="55" type="cond" truecount="0" falsecount="1"/>
+        <line num="52" count="45" type="stmt"/>
+        <line num="53" count="45" type="stmt"/>
+        <line num="55" count="55" type="stmt"/>
+        <line num="56" count="55" type="cond" truecount="0" falsecount="1"/>
+        <line num="57" count="10" type="stmt"/>
+        <line num="58" count="55" type="cond" truecount="0" falsecount="1"/>
+        <line num="59" count="45" type="stmt"/>
+        <line num="60" count="45" type="stmt"/>
+        <line num="62" count="55" type="stmt"/>
+        <line num="63" count="55" type="stmt"/>
+        <line num="64" count="188" type="stmt"/>
+        <line num="65" count="55" type="stmt"/>
+        <line num="66" count="40" type="stmt"/>
+        <line num="67" count="55" type="stmt"/>
+        <line num="68" count="25" type="stmt"/>
+        <line num="70" count="98" type="stmt"/>
+        <line num="72" count="188" type="stmt"/>
+        <line num="74" count="55" type="stmt"/>
+        <line num="77" count="178" type="stmt"/>
+        <line num="78" count="85" type="cond" truecount="1" falsecount="0"/>
+        <line num="79" count="124" type="stmt"/>
+        <line num="80" count="22" type="cond" truecount="1" falsecount="0"/>
+        <line num="82" count="190" type="stmt"/>
+        <line num="83" count="85" type="cond" truecount="2" falsecount="0"/>
+        <line num="84" count="44" type="stmt"/>
+        <line num="85" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="87" count="178" type="stmt"/>
+        <line num="88" count="216" type="cond" truecount="0" falsecount="1"/>
+        <line num="89" count="216" type="cond" truecount="1" falsecount="0"/>
+        <line num="90" count="220" type="cond" truecount="2" falsecount="0"/>
+        <line num="91" count="392" type="cond" truecount="0" falsecount="1"/>
+        <line num="92" count="60" type="cond" truecount="1" falsecount="0"/>
+        <line num="94" count="222" type="cond" truecount="2" falsecount="0"/>
+        <line num="96" count="178" type="cond" truecount="4" falsecount="0"/>
+        <line num="98" count="178" type="cond" truecount="2" falsecount="0"/>
+        <line num="99" count="222" type="cond" truecount="6" falsecount="1"/>
+        <line num="100" count="44" type="stmt"/>
+        <line num="101" count="188" type="cond" truecount="0" falsecount="3"/>
+        <line num="102" count="54" type="stmt"/>
+        <line num="103" count="54" type="stmt"/>
+        <line num="104" count="10" type="stmt"/>
+        <line num="105" count="10" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="108" count="20" type="stmt"/>
+        <line num="110" count="0" type="stmt"/>
+        <line num="112" count="178" type="stmt"/>
+        <line num="115" count="44" type="stmt"/>
+        <line num="116" count="178" type="stmt"/>
+        <line num="134" count="260" type="stmt"/>
+        <line num="135" count="226" type="cond" truecount="4" falsecount="0"/>
+        <line num="145" count="54" type="stmt"/>
+        <line num="149" count="178" type="stmt"/>
+      </file>
+      <file name="OrdersActiveScreen.tsx" path="G:/PROJECTS/orderlite/src/screens/OrdersActiveScreen.tsx">
+        <metrics statements="39" coveredstatements="31" conditionals="56" coveredconditionals="27" methods="25" coveredmethods="21"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="27" count="24" type="stmt"/>
+        <line num="28" count="18" type="stmt"/>
+        <line num="34" count="87" type="stmt"/>
+        <line num="35" count="87" type="stmt"/>
+        <line num="37" count="87" type="stmt"/>
+        <line num="38" count="87" type="stmt"/>
+        <line num="40" count="87" type="stmt"/>
+        <line num="41" count="87" type="stmt"/>
+        <line num="42" count="52" type="stmt"/>
+        <line num="43" count="24" type="cond" truecount="1" falsecount="1"/>
+        <line num="44" count="24" type="stmt"/>
+        <line num="45" count="30" type="cond" truecount="2" falsecount="2"/>
+        <line num="47" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="52" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="24" type="cond" truecount="0" falsecount="2"/>
+        <line num="51" count="24" type="stmt"/>
+        <line num="52" count="87" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="55" count="87" type="stmt"/>
+        <line num="56" count="62" type="cond" truecount="2" falsecount="0"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="60" count="87" type="cond" truecount="3" falsecount="0"/>
+        <line num="61" count="45" type="stmt"/>
+        <line num="63" count="0" type="cond" truecount="2" falsecount="1"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="45" type="stmt"/>
+        <line num="79" count="42" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="42" type="stmt"/>
+        <line num="93" count="10" type="stmt"/>
+        <line num="95" count="42" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="107" count="42" type="stmt"/>
+        <line num="140" count="32" type="stmt"/>
+        <line num="141" count="42" type="stmt"/>
+        <line num="162" count="0" type="stmt"/>
+        <line num="164" count="42" type="stmt"/>
+      </file>
+      <file name="OrdersBucketsScreen.tsx" path="G:/PROJECTS/orderlite/src/screens/OrdersBucketsScreen.tsx">
+        <metrics statements="36" coveredstatements="36" conditionals="56" coveredconditionals="50" methods="29" coveredmethods="29"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="31" count="348" type="stmt"/>
+        <line num="32" count="348" type="cond" truecount="3" falsecount="1"/>
+        <line num="34" count="348" type="stmt"/>
+        <line num="35" count="436" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="88" type="cond" truecount="1" falsecount="1"/>
+        <line num="72" count="146" type="stmt"/>
+        <line num="73" count="146" type="stmt"/>
+        <line num="74" count="146" type="stmt"/>
+        <line num="76" count="186" type="stmt"/>
+        <line num="77" count="129" type="stmt"/>
+        <line num="78" count="129" type="stmt"/>
+        <line num="79" count="100" type="stmt"/>
+        <line num="80" count="88" type="stmt"/>
+        <line num="81" count="121" type="stmt"/>
+        <line num="82" count="178" type="stmt"/>
+        <line num="83" count="178" type="stmt"/>
+        <line num="84" count="32" type="stmt"/>
+        <line num="86" count="146" type="cond" truecount="3" falsecount="0"/>
+        <line num="87" count="59" type="stmt"/>
+        <line num="90" count="40" type="cond" truecount="3" falsecount="0"/>
+        <line num="91" count="59" type="stmt"/>
+        <line num="105" count="378" type="cond" truecount="2" falsecount="0"/>
+        <line num="107" count="87" type="stmt"/>
+        <line num="110" count="177" type="cond" truecount="2" falsecount="0"/>
+        <line num="111" count="87" type="stmt"/>
+        <line num="114" count="22" type="stmt"/>
+        <line num="115" count="87" type="stmt"/>
+        <line num="123" count="88" type="cond" truecount="2" falsecount="0"/>
+        <line num="128" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="131" count="87" type="cond" truecount="1" falsecount="1"/>
+        <line num="137" count="22" type="stmt"/>
+        <line num="141" count="88" type="cond" truecount="2" falsecount="0"/>
+        <line num="146" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="149" count="87" type="cond" truecount="1" falsecount="1"/>
+        <line num="155" count="34" type="stmt"/>
+      </file>
+      <file name="ProfileScreen.tsx" path="G:/PROJECTS/orderlite/src/screens/ProfileScreen.tsx">
+        <metrics statements="30" coveredstatements="25" conditionals="50" coveredconditionals="21" methods="18" coveredmethods="14"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="36" count="440" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="49" count="220" type="stmt"/>
+        <line num="50" count="220" type="stmt"/>
+        <line num="51" count="220" type="stmt"/>
+        <line num="52" count="220" type="stmt"/>
+        <line num="54" count="220" type="cond" truecount="2" falsecount="0"/>
+        <line num="55" count="220" type="cond" truecount="2" falsecount="0"/>
+        <line num="57" count="220" type="stmt"/>
+        <line num="58" count="150" type="cond" truecount="4" falsecount="0"/>
+        <line num="59" count="220" type="cond" truecount="0" falsecount="2"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="220" type="cond" truecount="0" falsecount="2"/>
+        <line num="63" count="10" type="stmt"/>
+        <line num="64" count="10" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="67" count="220" type="stmt"/>
+        <line num="69" count="220" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="220" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="124" count="440" type="stmt"/>
+        <line num="164" count="35" type="stmt"/>
+        <line num="165" count="35" type="cond" truecount="1" falsecount="1"/>
+        <line num="169" count="35" type="stmt"/>
+        <line num="170" count="220" type="cond" truecount="0" falsecount="2"/>
+        <line num="172" count="35" type="cond" truecount="1" falsecount="1"/>
+        <line num="174" count="35" type="stmt"/>
+        <line num="177" count="220" type="cond" truecount="0" falsecount="2"/>
+      </file>
+      <file name="ProtectedRoute.tsx" path="G:/PROJECTS/orderlite/src/screens/ProtectedRoute.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="2" count="18" type="stmt"/>
+        <line num="5" count="30" type="stmt"/>
+        <line num="6" count="45" type="stmt"/>
+        <line num="7" count="76" type="stmt"/>
+        <line num="9" count="91" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="112" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="43" type="stmt"/>
+      </file>
+      <file name="RegisterScreen.tsx" path="G:/PROJECTS/orderlite/src/screens/RegisterScreen.tsx">
+        <metrics statements="27" coveredstatements="26" conditionals="40" coveredconditionals="22" methods="10" coveredmethods="9"/>
+        <line num="1" count="18" type="stmt"/>
+        <line num="21" count="2025" type="stmt"/>
+        <line num="22" count="2025" type="stmt"/>
+        <line num="24" count="2025" type="stmt"/>
+        <line num="25" count="2025" type="stmt"/>
+        <line num="27" count="8100" type="stmt"/>
+        <line num="28" count="1935" type="stmt"/>
+        <line num="30" count="2025" type="stmt"/>
+        <line num="31" count="2025" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="2025" type="stmt"/>
+        <line num="33" count="2025" type="cond" truecount="2" falsecount="2"/>
+        <line num="35" count="2025" type="cond" truecount="4" falsecount="0"/>
+        <line num="37" count="2025" type="cond" truecount="0" falsecount="2"/>
+        <line num="38" count="2025" type="cond" truecount="0" falsecount="4"/>
+        <line num="40" count="25" type="cond" truecount="1" falsecount="0"/>
+        <line num="41" count="25" type="stmt"/>
+        <line num="42" count="2025" type="cond" truecount="0" falsecount="1"/>
+        <line num="43" count="2025" type="stmt"/>
+        <line num="45" count="10" type="stmt"/>
+        <line num="46" count="10" type="stmt"/>
+        <line num="47" count="10" type="stmt"/>
+        <line num="48" count="10" type="stmt"/>
+        <line num="52" count="10" type="stmt"/>
+        <line num="55" count="2025" type="stmt"/>
+        <line num="58" count="2025" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="2025" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

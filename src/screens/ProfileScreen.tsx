@@ -1,4 +1,6 @@
-import { useState, type ReactNode } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
+import { Link, useNavigate } from 'react-router';
+
 import {
   Card,
   CardBody,
@@ -16,39 +18,22 @@ import {
   Stack,
   Text,
   Title,
+  Helper,
+  Button,
 } from '../components/ui/ui-kit';
 import BottomTabs from '../components/BottomTabs';
-export function ProfileScreen() {
-  const [notif, setNotif] = useState(false);
+import { Avatar } from '../components/Avatar';
+import { useAuth } from '../hooks/useAuth';
+import { useOrders } from '../hooks/useOrders';
 
-  const Avatar = () => (
-    <div
-      style={{
-        width: 88,
-        height: 88,
-        borderRadius: '50%',
-        background: '#fde68a',
-        display: 'grid',
-        placeItems: 'center',
-        border: '2px solid var(--line)',
-        margin: '12px auto 8px',
-      }}
-    >
-      <span role="img" aria-label="avatar" style={{ fontSize: 40 }}>
-        🧑🏻‍💻
-      </span>
-    </div>
-  );
+type RowProps = {
+  left: ReactNode | null;
+  right: ReactNode | null;
+  editable?: boolean;
+};
 
-  const Row = ({
-    left,
-    right,
-    editable,
-  }: {
-    left: ReactNode | null;
-    right: ReactNode | null;
-    editable: ReactNode | null;
-  }) => (
+function Row({ left, right, editable }: RowProps) {
+  return (
     <Stack dir="row" gap={8} style={{ alignItems: 'center', padding: '10px 2px' }}>
       <div style={{ flex: 1 }}>{left}</div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -58,17 +43,31 @@ export function ProfileScreen() {
       </div>
     </Stack>
   );
+}
 
-  const orders = [
-    { status: 'Ready', id: 123456, dt: '01/15/2024', price: 12.5 },
-    { status: 'Completed', id: 123457, dt: '01/16/2024', price: 8.75 },
-    { status: 'Ready', id: 123458, dt: '01/17/2024', price: 15.0 },
-  ];
+export function ProfileScreen() {
+  const [notif, setNotif] = useState(false);
+  const navigate = useNavigate();
+  const { user, logout } = useAuth();
+  const { orders, loading, error } = useOrders();
+
+  const displayName = user?.name ?? 'Guest';
+  const displayEmail = user?.email ?? '—';
+
+  const userOrders = useMemo(
+    () => (user ? orders.filter((o) => o.userId === user.id) : []),
+    [orders, user],
+  );
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login', { replace: true });
+  };
 
   return (
     <Screen>
       <Header>
-        <IconButton aria-label="menu">
+        <IconButton aria-label="back" onClick={() => navigate(-1)}>
           <IconBack />
         </IconButton>
         <Title>Profile</Title>
@@ -76,10 +75,12 @@ export function ProfileScreen() {
       </Header>
 
       <div className="container">
-        <Avatar />
-        <H1 style={{ textAlign: 'center', margin: 0 }}>Ethan Carter</H1>
+        <div style={{ display: 'grid', placeItems: 'center', margin: '12px 0 8px' }}>
+          <Avatar src="" size={88} />
+        </div>
+        <H1 style={{ textAlign: 'center', margin: 0 }}>{displayName}</H1>
         <Text style={{ textAlign: 'center', marginBottom: 10 }}>
-          <Muted>ethan.carter@email.com</Muted>
+          <Muted>{displayEmail}</Muted>
         </Text>
 
         <Card>
@@ -89,7 +90,7 @@ export function ProfileScreen() {
               left={
                 <>
                   <div>Name</div>
-                  <Muted>Ethan Carter</Muted>
+                  <Muted>{displayName}</Muted>
                 </>
               }
               right={null}
@@ -99,8 +100,8 @@ export function ProfileScreen() {
             <Row
               left={
                 <>
-                  <div>Phone</div>
-                  <Muted>+1 (555) 123-4567</Muted>
+                  <div>Email</div>
+                  <Muted>{displayEmail}</Muted>
                 </>
               }
               right={null}
@@ -126,6 +127,7 @@ export function ProfileScreen() {
                   border: '1px solid var(--color-secondary)',
                   background: notif ? 'var(--color-accent)' : '#eaf1f7',
                   position: 'relative',
+                  cursor: 'pointer',
                 }}
               >
                 <span
@@ -138,6 +140,7 @@ export function ProfileScreen() {
                     background: '#fff',
                     borderRadius: '50%',
                     boxShadow: 'var(--shadow-sm)',
+                    transition: 'left 0.15s ease',
                   }}
                 />
               </button>
@@ -150,21 +153,55 @@ export function ProfileScreen() {
         <Card>
           <CardBody>
             <H2>Order History</H2>
-            {orders.map((o) => (
-              <Stack key={o.id} dir="row" style={{ alignItems: 'center', padding: '8px 2px' }}>
-                <div style={{ flex: 1 }}>
-                  <a href="#">Order #{o.id}</a> • <Muted>{o.dt}</Muted> •{' '}
-                  <Muted>${o.price.toFixed(2)}</Muted>
-                </div>
-                <IconChevron />
-              </Stack>
-            ))}
+
+            {loading && <Helper>Loading orders...</Helper>}
+            {error && !loading && (
+              <Helper style={{ color: 'red', marginBottom: 4 }}>{error}</Helper>
+            )}
+            {!loading && !error && userOrders.length === 0 && <Helper>No orders yet.</Helper>}
+
+            {userOrders.map((o) => {
+              const date = new Date(o.createdAt);
+              const dt = isNaN(date.getTime())
+                ? '—'
+                : date.toLocaleDateString(undefined, {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                  });
+              const itemsCount = o.items?.reduce((sum, item) => sum + item.quantity, 0) ?? 0;
+
+              return (
+                <Stack key={o.id} dir="row" style={{ alignItems: 'center', padding: '8px 2px' }}>
+                  <div style={{ flex: 1 }}>
+                    <Link
+                      to={`/orders/${o.id}`}
+                      style={{ textDecoration: 'none', color: 'var(--color-accent)' }}
+                    >
+                      Order #{o.id}
+                    </Link>{' '}
+                    • <Muted>{dt}</Muted> • <Muted>{itemsCount} items</Muted>
+                  </div>
+                  <IconChevron />
+                </Stack>
+              );
+            })}
           </CardBody>
         </Card>
+
+        <div style={{ height: 16 }} />
+
+        <Button
+          type="button"
+          onClick={handleLogout}
+          style={{ width: '100%', marginTop: 4 }}
+          variant="outline"
+        >
+          Log out
+        </Button>
       </div>
 
       <BottomTabs />
-
       <SafeBottom />
     </Screen>
   );

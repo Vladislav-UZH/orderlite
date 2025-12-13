@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router';
 import {
   IconBack,
   Screen,
@@ -12,40 +13,63 @@ import {
   IconCart,
   IconSearch,
   H2,
-  Pills,
-  Pill,
   ListRow,
   RowTitle,
   RowSub,
   RowRight,
+  Select,
+  Helper,
 } from '../components/ui/ui-kit';
 import BottomTabs from '../components/BottomTabs';
+import { useMenuItems } from '../hooks/useMenuItems';
+
 export function MenuScreen() {
   const [query, setQuery] = useState('');
-  const [cat, setCat] = useState('Coffee');
+  const [cat, setCat] = useState('All');
 
-  const items = useMemo(
-    () => [
-      { name: 'Latte', sub: 'Espresso with steamed milk', price: 3.5 },
-      { name: 'Americano', sub: 'Espresso with hot water', price: 2.75 },
-      { name: 'Cappuccino', sub: 'Espresso with frothed milk', price: 3.25 },
-      { name: 'Mocha', sub: 'Espresso with chocolate and milk', price: 4.0 },
-      { name: 'Caramel Macchiato', sub: 'Espresso with caramel and milk', price: 4.5 },
-    ],
-    [],
+  const navigate = useNavigate();
+  const { items, loading, error } = useMenuItems();
+
+  const categories = useMemo(() => {
+    const set = new Set<string>();
+    items.forEach((i) => {
+      if (i.category) set.add(i.category);
+    });
+    return ['All', ...Array.from(set)];
+  }, [items]);
+
+  const filtered = useMemo(
+    () =>
+      items.filter((i) => {
+        const matchesQuery =
+          !query.trim() ||
+          i.name.toLowerCase().includes(query.toLowerCase()) ||
+          i.description.toLowerCase().includes(query.toLowerCase());
+
+        const matchesCat = cat === 'All' || i.category.toLowerCase() === cat.toLowerCase();
+
+        return matchesQuery && matchesCat;
+      }),
+    [items, query, cat],
   );
 
-  const cats = ['Coffee', 'Pastries', 'Sandwiches'];
-  const filtered = items.filter((i) => i.name.toLowerCase().includes(query.toLowerCase()));
+  const handleItemClick = (menuItemId: number) => {
+    navigate('/checkout', {
+      state: {
+        from: 'menu',
+        items: [{ menuItemId, quantity: 1 }],
+      },
+    });
+  };
 
   return (
     <Screen>
       <Header>
-        <IconButton aria-label="menu">
+        <IconButton aria-label="back" onClick={() => navigate(-1)}>
           <IconBack />
         </IconButton>
         <Title>OrderLite</Title>
-        <IconButton aria-label="cart">
+        <IconButton aria-label="cart" onClick={() => navigate('/orders/active')}>
           <IconCart />
         </IconButton>
       </Header>
@@ -65,23 +89,33 @@ export function MenuScreen() {
           />
         </Field>
 
-        <H2>Categories</H2>
-        <Pills>
-          {cats.map((c) => (
-            <Pill key={c} $selected={c === cat} onClick={() => setCat(c)}>
-              {c}
-            </Pill>
-          ))}
-        </Pills>
+        <H2>Filter</H2>
+        <Field>
+          <Label>Category</Label>
+          <Select value={cat} onChange={(e) => setCat(e.target.value)}>
+            {categories.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </Select>
+        </Field>
 
         <H2 style={{ marginTop: 16 }}>Menu Items</H2>
+
+        {loading && <Helper>Loading menu...</Helper>}
+        {error && !loading && <Helper style={{ color: 'red' }}>{error}</Helper>}
+        {!loading && !error && filtered.length === 0 && (
+          <Helper>No items match your search.</Helper>
+        )}
+
         <div>
           {filtered.map((i) => (
-            <ListRow key={i.name} onClick={() => {}}>
+            <ListRow key={i.id} onClick={() => handleItemClick(i.id)}>
               <div />
               <div>
                 <RowTitle>{i.name}</RowTitle>
-                <RowSub>{i.sub}</RowSub>
+                <RowSub>{i.description}</RowSub>
               </div>
               <RowRight>${i.price.toFixed(2)}</RowRight>
             </ListRow>
@@ -90,7 +124,6 @@ export function MenuScreen() {
       </div>
 
       <BottomTabs />
-
       <SafeBottom />
     </Screen>
   );
