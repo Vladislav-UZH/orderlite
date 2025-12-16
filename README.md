@@ -49,6 +49,3 @@ npx cypress run
 
 Перебзяк Владислав, ФІТ, 3 курс, Комп’ютерні науки (2025)
 
-```
-::contentReference[oaicite:0]{index=0}
-```
